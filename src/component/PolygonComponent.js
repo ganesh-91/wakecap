@@ -17,8 +17,6 @@ class PolygonComponent extends React.Component {
   }
 
   render() {
-    console.log("this.props.markersList", this.props)
-    // console.log("this.props.polygonsList",this.props.polygonsList)
     return (
       <div style={subContainerStyle}>
         <div className="list-container">

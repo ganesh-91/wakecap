@@ -148,9 +148,7 @@ class App extends React.Component {
       for (let ind = 0; ind < len; ind = ind + 2) {
         polygon.pos.push({ id: uniqueIdGenerator(), lat: pos[ind + 1], lng: pos[ind] });
       }
-      this.setState({ polygonsList: this.state.polygonsList.concat(polygon) }, () => {
-        console.log('this.state', this.state)
-      })
+      this.setState({ polygonsList: this.state.polygonsList.concat(polygon) })
     }
 
   }
@@ -187,14 +185,11 @@ class App extends React.Component {
           ...this.state.selectedObj,
           position: this.state.currPos
         }
-      }, () => {
-        console.log(this.state)
       })
     }
   }
 
   editSelected = (obj) => {
-    console.log('object', obj)
     this.setState({
       selectedObj: obj,
       newPolygon: obj.pos
@@ -250,7 +245,6 @@ class App extends React.Component {
 
 
   render() {
-    console.log('this.state.polygonsList', this.state.polygonsList)
     return (
       <div style={{
         display: 'flex',

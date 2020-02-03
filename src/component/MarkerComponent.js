@@ -19,7 +19,6 @@ class MarkerComponent extends React.Component {
               Markers List List
                     </li>
             {this.props.markersList.map((elm) => {
-              // console.log("this.props.markersList", this.props.markersList)
               return (
                 <li key={elm.id} className={"list-group-item list-group-item-action pt-0 pb-0 pl-2 pr-0 " + (this.props.selectedObj.id === elm.id ? 'active' : "")}>
                   <div className="marker-title">{elm.name}</div>
